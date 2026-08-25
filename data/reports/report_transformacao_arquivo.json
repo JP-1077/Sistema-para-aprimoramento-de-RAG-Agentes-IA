@@ -1,0 +1,113 @@
+{
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Image",
+      "url": "https://raw.githubusercontent.com/JP-1077/Sistema-para-Gerenciamento-de-Demandas-/refs/heads/main/PolaisAI-header.jpg",
+      "size": "Stretch",
+      "altText": "Polaris AI"
+    },
+    {
+      "type": "Container",
+      "style": "emphasis",
+      "bleed": true,
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Sistema de avaliação qualidade arquivos",
+          "size": "ExtraLarge",
+          "weight": "Bolder",
+          "horizontalAlignment": "Center",
+          "color": "Accent",
+          "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "",
+          "horizontalAlignment": "Center",
+          "spacing": "None",
+          "isSubtle": true,
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Resumo do Arquivo",
+      "size": "Medium",
+      "weight": "Bolder",
+      "color": "Accent",
+      "wrap": true,
+      "horizontalAlignment": "Center",
+      "spacing": "Medium"
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Nome do Arquivo:",
+          "value": "{{nome_arquivo}}"
+        },
+        {
+          "title": "Tipo do Arquivo:",
+          "value": "{{tipo_arquivo}}"
+        },
+        {
+          "title": "Nota Score Qualidade Arquivo:",
+          "value": "{{score_qualidade}}"
+        },
+        {
+          "title": "Nota Score Estrutura Arquivo:",
+          "value": "{{score_estrutura}}"
+        },
+        {
+          "title": "Nota Score Final:",
+          "value": "{{score_final}}"
+        },
+        {
+          "title": "Resultado Classificação:",
+          "value": "{{classificacao}}"
+        },
+        {
+          "title": "Arquivo aprovado?:",
+          "value": "{{aprovado}}"
+        },
+        {
+          "title": "Warnings:",
+          "value": "{{warnings}}"
+        },
+        {
+          "title": "Data Análise:",
+          "value": "{{data_analise}}"
+        }
+      ],
+      "spacing": "Medium"
+    },
+    {
+      "type": "ActionSet",
+      "spacing": "Large",
+      "actions": [
+        {
+          "type": "Action.OpenUrl",
+          "title": "Link para acessar documentação",
+          "url": "https://timbrasil.sharepoint.com/:f:/r/teams/Teams_5fd6817b85a84634a983c9ed3d5acf5a/Documentos%20Compartilhados/IA/Fontes%20de%20Conhecimento%20(Knowledge)/UltraCombo?csf=1&web=1&e=q8A0UH"
+        },
+        {
+          "type": "Action.OpenUrl",
+          "title": "Notificar equipe responsável pelo arquivo."
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Polaris AI - Resid. B2C AI & Transformation",
+      "size": "Small",
+      "horizontalAlignment": "Center",
+      "isSubtle": true,
+      "spacing": "Large",
+      "wrap": true
+    }
+  ]
+}

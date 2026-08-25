@@ -44,6 +44,8 @@ def execucao_aplicacao():
     mensagem_sucesso = ("Pipeline executado com sucesso.")
     mensagem_erro = None
 
+    logger.info(f"Data/Hora Início: " f"`{inicio_execucao.strftime('%Y-%m-%d %H:%M:%S')}")
+
     try:
         ingestion = IngestaoArquivos(r"C:\projetos\pipeline-qualidade-knowledge\data\input")
 
@@ -55,8 +57,11 @@ def execucao_aplicacao():
         report = (ReportService())
         transform = (TransformService())
         repository_arquivo = (InsercaoArquivo())
-
         arquivos = (ingestion.lista_arquivos_validos())
+
+        logger.info (f"Foram encontrados {len(arquivos)} arquivo(s) para processamento.")
+
+        
         logger.info(f"{len(arquivos)} arquivo(s) encontrados.")
 
         for arquivo in arquivos:
